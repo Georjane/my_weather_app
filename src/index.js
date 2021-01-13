@@ -12,13 +12,9 @@ const wind = document.querySelector('span#wind');
 const visibility = document.querySelector('span#visibility');
 const humidity = document.querySelector('span#humidity');
 
-const kelvinToCelsius = (temp) => {
-  return `${(temp - 273.15).toFixed(0)}°C`;
-}
+const kelvinToCelsius = (temp) => `${(temp - 273.15).toFixed(0)}°C`;
 
-const kelvinToFarenheit = (temp) => {
-  return `${((temp - 273.15) * (9 / 5) + 32).toFixed(0)}°F`;
-}
+const kelvinToFarenheit = (temp) => `${((temp - 273.15) * (9 / 5) + 32).toFixed(0)}°F`;
 
 const getWeatherData = async () => {
   try {
@@ -52,7 +48,7 @@ const getWeatherData = async () => {
   } catch (error) {
     cityNameInput.value = '';
   }
-}
+};
 
 getCityBtn.addEventListener('click', (e) => {
   e.preventDefault();
