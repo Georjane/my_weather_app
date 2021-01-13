@@ -47,17 +47,71 @@
               <button id="tempFBtn" class="convertTemp" type="submit"><i>Imperial: °F, mph</i></button>
             </div>
           </div>
-          <p>Sunny</p>
-          <p>Updated at 1pm</p>
+          <p id="tempDescription">Sunny</p>
           <p>
-            <span>Wind 11mph</span>
-            <span>Visibilty 11mi</span>
-            <span>Humidity 49%</span>
+            <span id="wind" class="pr-3">Wind speed: 11m/s</span>
+            <span id="visibility" class="pr-3">Visibilty: 11km</span>
+            <span id="humidity">Humidity: 49%</span>
           </p>
         </div>
       </div>
     </section>
-    <section></section>
+    <footer class="fixed-bottom bg-primary d-flex justify-content-around">
+      <ul class="navbar-nav">
+        <li class="nav-item">Sun
+        </li>
+        <li class="nav-item">
+          <i class="fas fa-cloud-rain"></i>
+        </li>
+        <li class="nav-item">
+          Mostly Cloudy
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          Mon
+        </li>
+        <li class="nav-item">
+          <i class="fas fa-cloud-sun"></i>
+        </li>
+        <li class="nav-item">
+          Cloudy
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          Tues
+        </li>
+        <li class="nav-item">
+          <i class="fas fa-cloud-rain"></i>
+        </li>
+        <li class="nav-item">
+          Sunny
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          Wed
+        </li>
+        <li class="nav-item">
+          <i class="fas fa-cloud-rain"></i>
+        </li>
+        <li class="nav-item">
+          Light rain
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          Thurs
+        </li>
+        <li class="nav-item">
+          <i class="fas fa-cloud-sun"></i>
+        </li>
+        <li class="nav-item">
+          Cloudy
+        </li>
+      </ul>
+    </footer>
   </main>
   <script src="./main.js"></script>
 </body>

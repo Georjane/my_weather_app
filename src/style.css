@@ -20,10 +20,20 @@
 
 body,
 .blue {
-  background-color: #396DE4;
+  background-color: rgba(9, 124, 255, 0.37);
   color: white;
 }
 
 .convertTemp {
   height: 30px;
+}
+
+body {
+  background-image: url('pic.jpg');
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+footer {
+  color: rgba(255, 255, 255, 0.5);
 }

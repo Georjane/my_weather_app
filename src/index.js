@@ -15,8 +15,13 @@ const cityNameInput = document.querySelector('input#cityName');
 const cityTag = document.querySelector('h1');
 const cityTemp = document.querySelector('p#cityTemp');
 const date = document.querySelector('p#date');
+const tempDescription = document.querySelector('p#tempDescription');
 const tempCBtn = document.querySelector('button#tempCBtn');
 const tempFBtn = document.querySelector('button#tempFBtn');
+const wind = document.querySelector('span#wind');
+const visibility = document.querySelector('span#visibility');
+const humidity = document.querySelector('span#humidity');
+
 
 
 getCityBtn.addEventListener("click",function(e){
@@ -37,6 +42,9 @@ async function getWeatherData() {
   cityTemp.innerHTML = kelvinToCelsius(city.main.temp);
   date.innerHTML = Date().slice(16, 21) + ', ' + Date().slice(0, 10);
   cityNameInput.value = '';
+  wind.innerHTML = 'Wind speed: ' + city.wind.speed + 'm/s'
+  visibility.innerHTML = 'Visibility: ' + (city.visibility)/1000 + 'km'
+  humidity.innerHTML = 'Humidity: ' + city.main.humidity + '%'
 
   tempCBtn.addEventListener('click', function(e) {
     e.preventDefault();
@@ -46,6 +54,12 @@ async function getWeatherData() {
     e.preventDefault();
     cityTemp.innerHTML = kelvinToFarenheit(city.main.temp);
   })
+  
+  if (city.main.temp >= 293) {
+    tempDescription.innerHTML = 'It\' a Sunny day';
+  } else {
+    tempDescription.innerHTML = 'It\' a Cold day';
+  }
 }
 
 function kelvinToCelsius(temp) {
