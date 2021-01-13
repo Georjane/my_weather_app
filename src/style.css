@@ -1,3 +1,24 @@
-body {
-  background-color: green;
+.btn-primary-outline {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  border: 0.5px solid rgb(13, 105, 224);
+  color: white;
+}
+
+.transparent-input {
+  background-color: rgba(0, 0, 0, 0.11);
+  border:none;  
+  font-size: larger;
+}
+
+.form-control::placeholder {
+  color: white;
+  opacity: 1; 
+}
+
+body,
+.blue {
+  background-color: #396DE4;
+  color: white;
 }
