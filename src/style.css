@@ -9,13 +9,13 @@
 
 .transparent-input {
   background-color: rgba(0, 0, 0, 0.11);
-  border:none;  
+  border: none;
   font-size: larger;
 }
 
 .form-control::placeholder {
   color: white;
-  opacity: 1; 
+  opacity: 1;
 }
 
 body,
@@ -30,10 +30,10 @@ body,
 
 body {
   background-image: url('pic.jpg');
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
 footer {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.705);
 }
