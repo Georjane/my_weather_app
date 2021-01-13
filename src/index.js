@@ -12,11 +12,12 @@ import './style.css';
 
 const getCityBtn = document.querySelector('button#getCityBtn');
 const cityNameInput = document.querySelector('input#cityName');
+const cityTag = document.querySelector('h1');
+const cityTemp = document.querySelector('p#cityTemp');
 
 getCityBtn.addEventListener("click",function(e){
   e.preventDefault();
-  getWeatherData();
-  
+  getWeatherData();  
 });
 
 async function getWeatherData() {
@@ -27,17 +28,20 @@ async function getWeatherData() {
   const response = await fetch(url, {mode: 'cors'});
   const cityData = await response.json();
   const city = await cityData;
-  console.log(city.name);
-  console.log(city.sys.country);
+  console.log(city);
+  console.log(city.main.temp);
+  cityTag.innerHTML = city.name + ', ' + city.sys.country;
+  cityTemp.innerHTML = kelvinToCelsius(city.main.temp);
 
-    // .then(function(response) {
-    //   return response.json();
-    // })
-    // .then(function(response) {
-    //   console.log(response.name);
-    //   console.log(response.sys.country);
-    //   // const para = document.createElement('p')
-    //   // para.innerHTML = response.name + ', ' + response.sys.country;
-    //   // p.appendChild(para);
-    // })
+  cityNameInput.value = '';
 }
+
+function kelvinToCelsius(temp) {
+  return (temp - 273.15).toFixed(0) + '°C';
+  // °C
+}
+function kelvinToFarenheit(temp) {
+  return ((temp - 273.15) * 9/5 + 32 ).toFixed(0) + '°F';
+}
+
+console.log(kelvinToFarenheit(281.52));
