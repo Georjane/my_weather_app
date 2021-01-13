@@ -12,14 +12,15 @@ const wind = document.querySelector('span#wind');
 const visibility = document.querySelector('span#visibility');
 const humidity = document.querySelector('span#humidity');
 
-function kelvinToCelsius(temp) {
+const kelvinToCelsius = (temp) => {
   return `${(temp - 273.15).toFixed(0)}°C`;
 }
-function kelvinToFarenheit(temp) {
+
+const kelvinToFarenheit = (temp) => {
   return `${((temp - 273.15) * (9 / 5) + 32).toFixed(0)}°F`;
 }
 
-async function getWeatherData() {
+const getWeatherData = async () => {
   try {
     const cityName = cityNameInput.value;
     const url = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=9e451d75ffc63a816314ca34a0f0ff4e`;
@@ -49,7 +50,6 @@ async function getWeatherData() {
       tempDescription.innerHTML = 'It\' a Cold day';
     }
   } catch (error) {
-    alert('Invalid City name: City not found!');
     cityNameInput.value = '';
   }
 }
