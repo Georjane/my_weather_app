@@ -14,6 +14,9 @@ const getCityBtn = document.querySelector('button#getCityBtn');
 const cityNameInput = document.querySelector('input#cityName');
 const cityTag = document.querySelector('h1');
 const cityTemp = document.querySelector('p#cityTemp');
+const date = document.querySelector('p#date');
+
+
 
 getCityBtn.addEventListener("click",function(e){
   e.preventDefault();
@@ -32,7 +35,7 @@ async function getWeatherData() {
   console.log(city.main.temp);
   cityTag.innerHTML = city.name + ', ' + city.sys.country;
   cityTemp.innerHTML = kelvinToCelsius(city.main.temp);
-
+  date.innerHTML = Date().slice(16, 21) + ', ' + Date().slice(0, 10);
   cityNameInput.value = '';
 }
 
@@ -44,4 +47,4 @@ function kelvinToFarenheit(temp) {
   return ((temp - 273.15) * 9/5 + 32 ).toFixed(0) + '°F';
 }
 
-console.log(kelvinToFarenheit(281.52));
+console.log();
