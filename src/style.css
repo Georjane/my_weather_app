@@ -1,4 +1,5 @@
-.btn-primary-outline {
+.btn-primary-outline,
+.convertTemp {
   background-color: transparent;
   border-color: transparent;
   box-shadow: none;
@@ -21,4 +22,8 @@ body,
 .blue {
   background-color: #396DE4;
   color: white;
+}
+
+.convertTemp {
+  height: 30px;
 }
