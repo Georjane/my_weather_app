@@ -1,0 +1,39 @@
+.btn-primary-outline,
+.convertTemp {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  border: 0.5px solid rgb(13, 105, 224);
+  color: white;
+}
+
+.transparent-input {
+  background-color: rgba(0, 0, 0, 0.11);
+  border: none;
+  font-size: larger;
+}
+
+.form-control::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+body,
+.blue {
+  background-color: rgba(9, 124, 255, 0.37);
+  color: white;
+}
+
+.convertTemp {
+  height: 30px;
+}
+
+body {
+  background-image: url('pic.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer {
+  color: rgba(255, 255, 255, 0.705);
+}
