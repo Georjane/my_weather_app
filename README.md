@@ -6,7 +6,7 @@ A user is able to search for a specific location's weather information and toggl
 ![](weather.png)
 
 ## Live Link
-- [here](https://sad-jepsen-eb9b01.netlify.app/)
+- [WeatherApp](https://epic-rosalind-85454c.netlify.app)
 
 ## Built With
 - HTML
