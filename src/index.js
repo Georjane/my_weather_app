@@ -1,4 +1,6 @@
 import './style.css';
+import { kelvinToCelsius, kelvinToFarenheit } from './components/converters';
+
 
 const getCityBtn = document.querySelector('button#getCityBtn');
 const cityNameInput = document.querySelector('input#cityName');
@@ -12,9 +14,7 @@ const wind = document.querySelector('span#wind');
 const visibility = document.querySelector('span#visibility');
 const humidity = document.querySelector('span#humidity');
 
-const kelvinToCelsius = (temp) => `${(temp - 273.15).toFixed(0)}°C`;
 
-const kelvinToFarenheit = (temp) => `${((temp - 273.15) * (9 / 5) + 32).toFixed(0)}°F`;
 
 const getWeatherData = async () => {
   try {
